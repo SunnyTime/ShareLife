@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--==================字体==================-->
+    <!--小号字体-->
+    <dimen name="base_small_10size">10sp</dimen>
+    <!--小号字体-->
+    <dimen name="base_small_size">12sp</dimen>
+    <!--中号字体-->
+    <dimen name="base_medium_size">15sp</dimen>
+    <!--大号字体-->
+    <dimen name="base_large_size">18sp</dimen>
+
+    <dimen name="base_14size">14sp</dimen>
+
+    <!--==================距离==================-->
+    <dimen name="base_space_05dp">0.5dp</dimen>
+
+    <dimen name="base_space_3dp">3dp</dimen>
+
+    <dimen name="base_space_5dp">5dp</dimen>
+
+    <dimen name="base_space_10dp">10dp</dimen>
+
+    <dimen name="base_space_15dp">15dp</dimen>
+
+    <dimen name="base_space_20dp">20dp</dimen>
+
+    <dimen name="base_space_25dp">25dp</dimen>
+
+    <dimen name="base_space_30dp">30dp</dimen>
+
+    <dimen name="base_space_40dp">40dp</dimen>
+
+    <dimen name="base_space_50dp">50dp</dimen>
+
+    <!--高度-->
+    <dimen name="base_height_45dp">45dp</dimen>
+
+    <dimen name="base_height_55dp">55dp</dimen>
+
+    <dimen name="base_height_1dp">1dp</dimen>
+</resources>

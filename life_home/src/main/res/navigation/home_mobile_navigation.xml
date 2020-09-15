@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_community">
+
+    <fragment
+        android:id="@+id/navigation_community"
+        android:name="com.du.lifehome.ui.community.CommunityFragment"
+        android:label="@string/home_title_community"
+        tools:layout="@layout/home_fragment_community" />
+
+    <fragment
+        android:id="@+id/navigation_attention"
+        android:name="com.du.lifehome.ui.attention.AttentionFragment"
+        android:label="@string/home_title_attention"
+        tools:layout="@layout/home_fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_user"
+        android:name="com.du.lifehome.ui.user.UserFragment"
+        android:label="@string/home_title_user"
+        tools:layout="@layout/home_fragment_home" />
+</navigation>

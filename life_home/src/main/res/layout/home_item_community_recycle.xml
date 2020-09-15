@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/base_white"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/base_space_15dp"
+    android:paddingTop="@dimen/base_space_15dp"
+    android:paddingRight="@dimen/base_space_15dp"
+    tools:ignore="HardcodedText">
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/style_text_normal_mw_content"
+        android:text="****"
+        android:textColor="@color/base_color_main_hint" />
+
+    <TextView
+        android:id="@+id/intro"
+        style="@style/style_text_normal_mw_content"
+        android:layout_marginTop="@dimen/base_space_10dp"
+        android:maxLines="3"
+        android:text="****" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/base_space_5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/author"
+            style="@style/style_text_tip_ww_content"
+            android:text="****" />
+
+        <TextView
+            android:id="@+id/time"
+            style="@style/style_text_tip_ww_content"
+            android:layout_marginStart="@dimen/base_space_10dp"
+            android:text="****" />
+    </LinearLayout>
+
+    <View
+        style="@style/style_divider"
+        android:layout_marginTop="@dimen/base_space_10dp" />
+</LinearLayout>

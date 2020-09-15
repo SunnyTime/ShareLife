@@ -1,0 +1,54 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <!--UI View Style-->
+    <style name="layout_wrap_content">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="layout_match_content">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="layout_match_wrap_content">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="style_text_normal_mw_content" parent="layout_match_wrap_content">
+        <item name="android:textSize">@dimen/base_medium_size</item>
+        <item name="android:textColor">@color/base_color_main_text</item>
+    </style>
+
+    <style name="style_text_normal_ww_content" parent="layout_wrap_content">
+        <item name="android:textSize">@dimen/base_medium_size</item>
+        <item name="android:textColor">@color/base_color_main_text</item>
+    </style>
+
+    <style name="style_text_tip_ww_content" parent="layout_wrap_content">
+        <item name="android:textSize">@dimen/base_small_size</item>
+        <item name="android:textColor">@color/base_color_main_hint</item>
+    </style>
+
+    <style name="style_text_tip_mc_content" parent="layout_match_wrap_content">
+        <item name="android:textSize">@dimen/base_small_size</item>
+        <item name="android:textColor">@color/base_color_main_hint</item>
+    </style>
+
+    <!--分割线样式-->
+    <style name="style_divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/base_space_05dp</item>
+        <item name="android:background">@color/base_color_divide</item>
+    </style>
+</resources>

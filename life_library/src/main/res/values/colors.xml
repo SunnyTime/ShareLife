@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3742fa</color>
+    <color name="colorPrimaryDark">#5352ed</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="base_white">#ffffff</color>
+
+    <!--品牌主色-->
+    <color name="base_color_main">#5352ed</color>
+    <!--主要字颜色-->
+    <color name="base_color_main_text">#19191E</color>
+    <!--提示性文字颜色-->
+    <color name="base_color_main_hint">#96969B</color>
+    <!--分割线颜色-->
+    <color name="base_color_divide">#DCDCDC</color>
+</resources>

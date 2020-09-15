@@ -1,0 +1,96 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+ext {
+    isModuleOfFundChannel = true
+    isModuleOfLogin = true
+    isModuleOfHome = true
+
+    versions = [
+            'compileSdkVersion' : 29,
+            'minSdkVersion'     : 21,
+            'targetSdkVersion'  : 29,
+            'support_version'   : '29.0.0',
+            'kotlin_version'    : '1.3.72',
+            'butterknifeVersion': "10.2.1",
+
+            //此处修改版本号
+            'versionCode'       : 1,
+            'life_version'      : '1.0',
+            'life_debug_version': '1.0_test'
+    ]
+
+    dependencies = [
+            'design'                 : "com.android.support:design:$versions.support_version",
+            'supportv4'              : "com.android.support:support-v4:$versions.support_version",
+            'supportv7'              : "com.android.support:appcompat-v7:$versions.support_version",
+            'cardviewv7'             : "com.android.support:cardview-v7:$versions.support_version",
+            "recyclerview"           : "com.android.support:recyclerview-v7:$versions.support_version",
+
+            'eventbus'               : 'org.greenrobot:eventbus:3.0.0',
+            'rxpermissions'          : 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.5@aar',
+            "rxandroid"              : 'io.reactivex.rxjava2:rxandroid:2.0.2',
+            "rxjava"                 : 'io.reactivex.rxjava2:rxjava:2.1.16',
+
+            //黄油刀
+            "butterknife"         : "com.jakewharton:butterknife:${versions["butterknifeVersion"]}",
+            "butterknife_compiler": "com.jakewharton:butterknife-compiler:${versions["butterknifeVersion"]}",
+
+            "constraintlayout"       : 'androidx.constraintlayout:constraintlayout:2.0.1',
+            "appcompat"              : 'androidx.appcompat:appcompat:1.2.0',
+            "core"                   : "androidx.core:core-ktx:1.3.1",
+            "kotlin"                 : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version",
+            "material"               : "com.google.android.material:material:1.2.0",
+            "navigation_fragment"    : 'androidx.navigation:navigation-fragment:2.3.0',
+            "navigation_ui"          : 'androidx.navigation:navigation-ui:2.3.0',
+            "lifecycle"              : 'androidx.lifecycle:lifecycle-extensions:2.2.0',
+            "navigation_fragment_ktx": 'androidx.navigation:navigation-fragment-ktx:2.3.0',
+            "navigation_ui_ktx"      : 'androidx.navigation:navigation-ui-ktx:2.3.0'
+    ]
+
+    appId = [
+            'leadfundchannel': 'com.leadbank.fundchannel'
+    ]
+
+    //解析app配置信息
+    parseAppConfig = {
+        def map = [:]
+        def configFile = getRootDir().absolutePath + "/appconfig/app_config.xml"
+        def config = new XmlSlurper().parse(configFile)
+        //服务器地址
+        map.put("url_debug", "\"" + config.url_debug + "\"")
+        map.put("url_beta", "\"" + config.url_beta + "\"")
+        map.put("url_pre", "\"" + config.url_pre + "\"")
+        map.put("url_release", "\"" + config.url_release + "\"")
+
+        map.put("lbf_project", "\"" + config.lbf_project + "\"")
+
+        //cms服务器地址
+        map.put("url_debug_cms", "\"" + config.url_debug_cms + "\"")
+        map.put("url_beta_cms", "\"" + config.url_beta_cms + "\"")
+        map.put("url_pre_cms", "\"" + config.url_pre_cms + "\"")
+        map.put("url_release_cms", "\"" + config.url_release_cms + "\"")
+
+        map.put("url_debug_trace", "\"" + config.url_debug_trace + "\"")
+        map.put("url_pre_trace", "\"" + config.url_pre_trace + "\"")
+        map.put("url_release_trace", "\"" + config.url_release_trace + "\"")
+        //签名文件地址
+        map.put("keystore_debug", getRootDir().absolutePath + config.keystore_debug)
+        map.put("keystore_release", getRootDir().absolutePath + config.keystore_release)
+
+        return map
+    }
+
+    //获取系统当前时间
+    currentDate = {
+        def date = new Date()
+        def formattedDate = date.format('yyyyMMddHHmm')
+        return formattedDate
+    }
+
+    //获取系统系统版本号
+    currentVerson = {
+        return "$versions.ldb_version"
+    }
+}
+
+
+
