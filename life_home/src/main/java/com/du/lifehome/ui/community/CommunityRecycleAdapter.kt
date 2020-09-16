@@ -4,8 +4,11 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import android.widget.TextView
+import com.alibaba.android.arouter.launcher.ARouter
 import com.du.library.base.BaseRecycleAdapter
+import com.du.library.key.RouterKey
 import com.du.lifehome.R
 import com.du.lifehome.bean.response.Articles
 
@@ -35,6 +38,10 @@ class CommunityRecycleAdapter(private val context: Context) : BaseRecycleAdapter
         holder.intro.text = bean.intro
         holder.author.text = bean.author
         holder.time.text = bean.time
+
+        holder.content.setOnClickListener {
+            ARouter.getInstance().build(RouterKey.ARTICLE_DETAILS_ACTIVITY).navigation()
+        }
     }
 }
 
@@ -43,4 +50,5 @@ class RecycleViewHolder(itemView: View) : BaseRecycleAdapter.ViewHolder(itemView
     var intro: TextView = itemView.findViewById<View>(R.id.intro) as TextView
     var author: TextView = itemView.findViewById<View>(R.id.author) as TextView
     var time: TextView = itemView.findViewById<View>(R.id.time) as TextView
+    var content:LinearLayout = itemView.findViewById<View>(R.id.content) as LinearLayout
 }

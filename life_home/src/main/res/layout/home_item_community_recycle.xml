@@ -8,6 +8,7 @@
     android:paddingLeft="@dimen/base_space_15dp"
     android:paddingTop="@dimen/base_space_15dp"
     android:paddingRight="@dimen/base_space_15dp"
+    android:id="@+id/content"
     tools:ignore="HardcodedText">
 
     <TextView

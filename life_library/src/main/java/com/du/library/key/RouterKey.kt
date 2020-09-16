@@ -11,10 +11,15 @@ package com.du.library.key
  */
 class RouterKey {
     companion object {
+        //home
         const val HOME_ACTIVITY = "/home/HomeActivity"
 
+        //article
+        const val ARTICLE_DETAILS_ACTIVITY = "/article/ArticleDetailsActivity"
+
         var map = mapOf(
-            HOME_ACTIVITY to ""
+            HOME_ACTIVITY to "0",
+            ARTICLE_DETAILS_ACTIVITY to "1"
         )
     }
 }

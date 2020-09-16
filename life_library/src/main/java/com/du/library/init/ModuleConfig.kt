@@ -12,8 +12,9 @@ package com.du.library.init
 class ModuleConfig {
     companion object {
         //private const val moduleBaseAppInit = "com.du.library.init.ModuleBaseAppInit"
-        private const val moduleHomeAppInit = "com.du.lifehome.init.ModuleHomeAppInit"
+        private const val moduleHomeAppInit = "com.du.lifehome.init.ModuleHomeAppInit"//首页Module
+        private const val moduleArticleAppInit = "com.du.article.init.ModuleArticleAppInit"//文章Module
 
-        var moduleInit = arrayOf(moduleHomeAppInit)
+        var moduleInit = arrayOf(moduleHomeAppInit, moduleArticleAppInit)
     }
 }

@@ -60,7 +60,11 @@ dependencies {
 
     implementation project(':life_library')
 
-    implementation project(':life_home')
+    if (isModuleOfHome) {
+        implementation project(':life_home')
+    }
+
+    implementation project(':life_article')
 
     kapt 'com.alibaba:arouter-compiler:1.2.2'
 }

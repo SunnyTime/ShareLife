@@ -2,7 +2,7 @@
 ext {
     isModuleOfFundChannel = true
     isModuleOfLogin = true
-    isModuleOfHome = true
+    isModuleOfHome = false
 
     versions = [
             'compileSdkVersion' : 29,

@@ -1,2 +1,2 @@
-include ':app', ':life_home', ':life_library', ':life_log'
+include ':app', ':life_home', ':life_library', ':life_log', ':life_article'
 rootProject.name='ShareLife'
